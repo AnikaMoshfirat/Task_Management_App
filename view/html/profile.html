@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Profile | TM</title>
+        <link rel="icon" type="image/png" href="../../asset/imgs/icon.png">
+        <link rel="stylesheet" href="../../asset/css/profileStyle.css">
+    </head>
+
+    <body>
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="imgs/messi.jpg" alt="Profile Avatar" class="profile-avatar" id="profile-avatar">
+                <h2>Lionel Messi</h2>
+                <p>lm10@gmail.com</p>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab active" data-tab="view">View Profile</div>
+                <div class="tab" data-tab="edit">Edit Profile</div>
+                <div class="tab" data-tab="avatar">Change Avatar</div>
+                <div class="tab" data-tab="password">Reset Password</div>
+            </div>
+
+            <div class="tab-content active" id="view-tab">
+                <div class="profile-section">
+                    <h3>Personal Information</h3>
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <label>First Name</label>
+                            <span id="view-first-name">Lionel</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Last Name</label>
+                            <span id="view-last-name">Messi</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Email</label>
+                            <span id="view-email">lm10@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone</label>
+                            <span id="view-phone">+441028391</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Date of Birth</label>
+                            <span id="view-dob">June 24, 1987</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Address</label>
+                            <span id="view-address">Rosario, Argentina</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="edit-tab">
+                <div class="profile-section">
+                    <h3>Edit Profile</h3>
+                    <form id="edit-profile-form">
+                        <div class="profile-info">
+                            <div class="input-group">
+                                <label for="edit-first-name">First Name</label>
+                                <input type="text" id="edit-first-name" value="" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="edit-last-name">Last Name</label>
+                                <input type="text" id="edit-last-name" value="" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="edit-email">Email</label>
+                                <input type="email" id="edit-email" value="" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="edit-phone">Phone</label>
+                                <input type="tel" id="edit-phone" value="">
+                            </div>
+                            <div class="input-group">
+                                <label for="edit-dob">Date of Birth</label>
+                                <input type="date" id="edit-dob" value="">
+                            </div>
+                            <div class="input-group">
+                                <label for="edit-address">Address</label>
+                                <textarea id="edit-address" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="cancel" id="cancel-edit">Cancel</button>
+                            <button type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tab-content" id="avatar-tab">
+                <div class="profile-section">
+                    <h3>Change Avatar</h3>
+                    <div style="text-align: center;">
+                        <p>Current Avatar:</p>
+                        <img src="imgs/cr7.png" alt="Current Avatar" style="width: 150px; height: 150px; border-radius: 50%; margin: 10px 0;">
+                        <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                        <button type="button" id="upload-avatar-btn">Upload New Avatar</button>
+                        <p class="message" id="avatar-message"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="password-tab">
+                <div class="profile-section">
+                    <h3>Reset Password</h3>
+                    <form id="reset-password-form">
+                        <div class="input-group">
+                            <label for="current-password">Current Password</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="current-password" required>
+                                <span toggle="#current-password" class="toggle-password">👁️</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="new-password">New Password</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="new-password" required>
+                                <span toggle="#new-password" class="toggle-password">👁️</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="confirm-password" required>
+                                <span toggle="#confirm-password" class="toggle-password">👁️</span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit">Change Password</button>
+                        </div>
+                        <div class="message" id="password-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="avatar-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Crop Your Avatar</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="crop-area">
+                    <img id="avatar-preview" src="" alt="Preview">
+                </div>
+                <div class="modal-actions">
+                    <button class="cancel" id="cancel-crop">Cancel</button>
+                    <button id="save-avatar">Save Avatar</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../asset/js/profile.js"></script>
+    </body>
+</html>
