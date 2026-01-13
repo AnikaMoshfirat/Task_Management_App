@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard | TM</title>
+  <link rel="icon" type="image/png" href="../../asset/imgs/icon.png">
+  <link rel="stylesheet" href="../../asset/css/dashboard.css">
+
+</head>
+
+<body>
+  <div class="dashboard-container">
+
+    <header>
+      <center><h1>Dashboard</h1></center>
+    </header>
+
+    <section class="summary-widgets">
+      <div class="widget" onclick="viewDetails('tasks')">
+        <h2>24</h2>
+        <p>Tasks</p>
+      </div>
+      <div class="widget" onclick="viewDetails('completed')">
+        <h2>18</h2>
+        <p>Completed</p>
+      </div>
+      <div class="widget" onclick="viewDetails('pending')">
+        <h2>6</h2>
+        <p>Pending</p>
+      </div>
+      <div class="widget" onclick="viewDetails('overdue')">
+        <h2>2</h2>
+        <p>Overdue</p>
+      </div>
+    </section>
+
+    <section class="quick-actions">
+      <h2>Quick Actions</h2>
+      <div class="quick-buttons">
+        <a href="../php/taskcreation.php">
+          <button onclick="quickAddTask()">Add Task</button>
+        </a>
+        <a href="../php/progressTrackPage.php">
+          <button onclick="viewAnalytics()">View Analytics</button>
+        </a>
+
+        <a href="../php/activityHistoryPage.php">
+          <button onclick="viewAllTasks()">View All Tasks</button>
+        </a>
+        <a href="../php/calenderView.php">
+          <button onclick="viewCalendar()">Calendar View</button>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script src="../../asset/js/dashboard.js"></script>
+</body>
+</html>
