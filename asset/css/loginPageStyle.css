@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right,rgb(41, 128, 185), rgb(109, 213, 250)); 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.loginContainer {
+  background-color: rgb(255, 255, 255);
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 360px;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(51, 51, 51); 
+}
+
+.inGrp {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: rgb(85, 85, 85);
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 8px;
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+button {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  background-color: rgb(52, 152, 219); 
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;               
+  margin: 20px auto 0 auto;       
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: rgb(41, 128, 185); 
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.message {
+  margin-top: 10px;
+  text-align: center;
+  color: rgb(255, 0, 0);
+  font-size: 14px;
+}
+
+.links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.links a {
+  color: rgb(52, 152, 219); 
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin: 5px 0;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: rgb(33, 97, 140); 
+  text-decoration: underline;
+}
+
+#loginTitleTxt {
+  font-style: italic;
+  color: rgb(0, 0, 0); 
+  box-shadow: rgb(51, 51, 51); 
+}
