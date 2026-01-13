@@ -34,13 +34,5 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         message.textContent = "Password must be at least 8 characters.";
         return;
     }
-
-    const weakPwd = ["12345678","password","admin","qwerty"];
-    if(weakPwd.includes(password.toLowerCase())) {
-        e.preventDefault();
-        message.style.color = "red";
-        message.textContent = "Your password is too weak!";
-        return;
-    }
 });
 
