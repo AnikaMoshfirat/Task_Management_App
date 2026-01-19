@@ -1,0 +1,177 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 40px 20px;
+}
+
+.task-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+}
+
+header h1 {
+  text-align: center;
+  color: #333;
+}
+
+.quick-add {
+  display: flex;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.quick-add input {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.quick-add button {
+  background-color: #3498db;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.quick-add button:hover {
+  background-color: #2980b9;
+}
+
+.advanced-form {
+  margin-top: 30px;
+  display: none;
+  animation: slideDown 0.5s ease forwards;
+}
+
+.advanced-form h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea, form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+form button {
+  background-color: #3498db;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-manager {
+  display: none;
+  margin-top: 30px;
+}
+
+.category-manager h2 {
+  color: #333;
+}
+
+.category-manager ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.category-manager li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.task-lists {
+  margin-top: 30px;
+}
+
+.task-item {
+  padding: 10px;
+  background: #ecf0f1;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+.file-input {
+  font-size: 14px;
+}
+
+.attachment {
+  font-size: 13px;
+  color: #666;
+  margin-top: 5px;
+}
