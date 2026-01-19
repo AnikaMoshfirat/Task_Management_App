@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgb(0, 170, 255), rgb(0, 71, 179));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.profileBlock {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  height: auto;
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.profileHeading {
+  margin-bottom: 30px;
+}
+
+.profilePic {
+  cursor: pointer;
+}
+
+.profileHeading h2 {
+  color: rgb(51, 51, 51);
+  margin-bottom: 30px;
+}
+
+.profilePic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgb(52, 152, 219);
+  margin: 0 auto 5px;
+  display: block;
+  cursor: pointer;
+}
+
+.dpup {
+  display: none;
+}
+
+.profileSec {
+  background-color: rgb(249, 249, 249);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.profileSec h3 {
+  margin-top: 0;
+  color: rgb(52, 152, 219);
+  border-bottom: 1px solid rgb(238, 238, 238);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.profileInfo {
+  display: flex;
+  gap: 15px; 
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+
+.infos {
+  margin-bottom: 10px;
+  flex: 1 1 30%; 
+}
+
+.infos label {
+  font-weight: bold;
+  color: rgb(85, 85, 85);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.infos input[type="text"],
+.infos input[type="email"],
+.infos input[type="tel"],
+.infos input[type="date"],
+.infos input[type="password"] {
+  display: block;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid rgb(238, 238, 238);
+  width: 100%;
+}
+
+.infos input[type="password"] {
+  padding: 12px;
+}
+
+.infos input[type="radio"] {
+  margin-right: 2px;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.formButtons button {
+  width: auto;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.formButtons button.cancel {
+  background: linear-gradient(135deg, rgb(231, 76, 60), rgb(192, 57, 43));
+}
+
+.formButtons button.cancel:hover {
+  background: linear-gradient(135deg, rgb(192, 57, 43), rgb(231, 76, 60));
+}
+
+.formButtons button.submit {
+  background: linear-gradient(135deg, rgb(52, 152, 219), rgb(41, 128, 185));
+}
+
+.formButtons button.submit:hover {
+  background: linear-gradient(135deg, rgb(41, 128, 185), rgb(52, 152, 219));
+}
+
+.genderOps {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.genders {
+  font-size: 14px;
+  color: rgb(85, 85, 85);
+  gap: 5px;
+}
+
+.genders input[type="radio"] {
+  margin-right: 5px;
+}
+
+.password-strength {
+  margin-top: 5px;
+  font-size: 12px;
+  color: rgb(85, 85, 85);
+  text-align: left;
+}
+
+.password-strength.weak {
+  color: rgb(231, 76, 60);
+}
+
+.password-strength.medium {
+  color: rgb(243, 156, 18);
+}
+
+.password-strength.strong {
+  color: rgb(46, 204, 113);
+}
