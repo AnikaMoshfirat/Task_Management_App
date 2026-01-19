@@ -1,0 +1,90 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #2980b9, #6dd5fa);
+}
+
+.calendarContainer {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendarHeader h2 {
+    color: #333;
+}
+
+.calendarTabs button {
+    margin: 0 5px;
+    padding: 8px 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.calendarTabs button:hover {
+    background-color: #2980b9;
+}
+
+.calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendarCell {
+    background: #f5f9fc;
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 120px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.calendarCell strong {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.calendarCell small {
+    color: #777;
+    margin-bottom: 2px;
+}
+
+.task {
+    background: #2980b9;
+    color: white;
+    padding: 6px 8px;
+    margin-top: 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    width: calc(100% - 16px);
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+.task strong {
+    color: white;
+    font-size: 14px;
+}
+
+.task small {
+    color: rgba(255, 255, 255, 0.8);
+}
